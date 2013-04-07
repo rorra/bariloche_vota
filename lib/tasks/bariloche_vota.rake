@@ -39,6 +39,7 @@ namespace :bariloche_vota do
         else
           imported += 1
           Table.create(school: school, name: table_name)
+          puts "Table #{table_name} for School #{school_name} imported"
         end
       else
         errors += 1

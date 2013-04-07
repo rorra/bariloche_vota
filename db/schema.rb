@@ -58,12 +58,12 @@ ActiveRecord::Schema.define(:version => 20130407093851) do
   create_table "tables", :force => true do |t|
     t.integer  "school_id"
     t.string   "name"
-    t.integer  "votes_yes"
-    t.integer  "votes_no"
-    t.integer  "votes_blank"
-    t.integer  "votes_nil"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.integer  "votes_yes",   :default => 0, :null => false
+    t.integer  "votes_no",    :default => 0, :null => false
+    t.integer  "votes_blank", :default => 0, :null => false
+    t.integer  "votes_nil",   :default => 0, :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   add_index "tables", ["name"], :name => "index_tables_on_name"
