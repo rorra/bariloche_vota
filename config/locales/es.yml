@@ -201,5 +201,28 @@ es:
     errors:
       <<: *errors
   activerecord:
+    models:
+      school: Escuela
+      table: Mesa
+      admin_user: Administrador
+    attributes:
+      admin_user:
+        current_sign_in_at: Sesión actual
+        last_sign_in_at: Última sesión
+        sign_in_count: Sesiones iniciadas
+      school:
+        name: Nombre
+        address: Dirección
+        created_at: Fecha de creación
+        updated_at: Última actualización
+      table:
+        school: Escuela
+        name: Nombre
+        votes_yes: Votos Sí
+        votes_no: Votos No
+        votes_blank: Votos en Blanco
+        votes_nil: Votos Nulos
+        created_at: Fecha de creación
+        updated_at: Última actualización
     errors:
       <<: *errors
