@@ -1,20 +1,20 @@
 development:
-  adapter: pg
+  adapter: postgresql
   host: localhost
   database: bariloche_vota_dev
-  username: root
+  username: postgres
   password:
 
 test:
-  adapter: pg
+  adapter: postgresql
   host: localhost
   database: bariloche_vota_test
-  username: root
+  username: postgres
   password:
 
 production:
-  adapter: pg
+  adapter: postgresql
   host: localhost
   database: bariloche_vota
-  username: root
+  username: postgres
   password:
