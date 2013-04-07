@@ -1,0 +1,11 @@
+<p>
+  <strong>Nombre:</strong>
+  <%= @escuela.nombre %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @escuela.direccion %>
+</p>
+<%= link_to 'Back', :action => :index %>
+| <%= link_to 'Edit', :action => :edit, :id => @escuela.id %>

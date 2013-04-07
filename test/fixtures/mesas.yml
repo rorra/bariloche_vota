@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nombre: MyString
+  si: 1
+  'no': 1
+  blanco: 1
+  nulo: 1
+  tms: 1
+  tmn: 1
+  tmb: 1
+  tmn: 1
+
+two:
+  nombre: MyString
+  si: 1
+  'no': 1
+  blanco: 1
+  nulo: 1
+  tms: 1
+  tmn: 1
+  tmb: 1
+  tmn: 1
