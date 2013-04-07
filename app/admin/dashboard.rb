@@ -29,7 +29,7 @@ ActiveAdmin.register_page "Dashboard" do
         panel "Info" do
           table_for Table.joins(:school).order("schools.name, tables.name") do |t|
             t.column("Escuela") { |row| row.school.name }
-            t.column("Mesa") { |row| row.name }
+            t.column("Mesa") { |row| link_to(row.name, edit_admin_table_path(row.id)) }
             t.column("Votos Sí") { |row| row.votes_yes }
             t.column("Votos No") { |row| row.votes_no }
             t.column("Votos en Blanco") { |row| row.votes_blank }
