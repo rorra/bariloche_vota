@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Votesi::Application.load_tasks
+BarilocheVota::Application.load_tasks
