@@ -21,6 +21,7 @@ namespace :bariloche_vota do
     puts "Imported: #{imported}, Warnings: #{warnings}"
   end
 
+  desc "Import tables into the db"
   task import_tables: :environment do
     require 'csv'
     csv_file = File.expand_path("../../../db/data/escrutinio.csv", __FILE__)
