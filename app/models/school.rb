@@ -1,3 +1,5 @@
 class School < ActiveRecord::Base
-  # attr_accessible :title, :body
+  has_many :tables
+
+  attr_accessible :name, :address
 end
