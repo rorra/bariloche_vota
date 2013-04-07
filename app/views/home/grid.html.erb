@@ -1,0 +1,26 @@
+<%- @schools.each do |school| %>
+  <h5>Escuela <%= school.name %></h5>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <td>Mesa</td>
+      <td>Sí</td>
+      <td>No</td>
+    </tr>
+    </thead>
+    <tbody>
+    <%- school.tables.order(:name).each do |table| %>
+      <tr>
+        <td><%= table.name %></td>
+        <td><%= table.votes_yes %></td>
+        <td><%= table.votes_no %></td>
+      </tr>
+    <%- end %>
+    <tr>
+      <td>TOTAL</td>
+      <td><%= school.tables.sum(:votes_yes) %></td>
+      <td><%= school.tables.sum(:votes_no) %></td>
+    </tr>
+    </tbody>
+  </table>
+<%- end %>

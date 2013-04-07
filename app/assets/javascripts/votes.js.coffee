@@ -37,7 +37,7 @@ $ ->
             color: "#000000"
             connectorColor: "#000000"
             formatter: ->
-              "<b>" + @point.name + "</b>: " + @percentage + " %"
+              "<b>" + @point.name + "</b>: " + @percentage.toFixed(2) + " %"
 
       series: [
         type: "pie"

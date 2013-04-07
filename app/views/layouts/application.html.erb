@@ -32,7 +32,6 @@
         <ul class="nav">
           <li class="<%= params[:action] == 'votes' ? 'active' : '' %>"><%= link_to("Votos", votes_path) %></li>
           <li class="<%= params[:action] == 'schools' ? 'active' : '' %>"><%= link_to("Escuelas escrutadas", schools_path) %></li>
-          <li class="<%= params[:action] == 'tables' ? 'active' : '' %>"><%= link_to("Mesas escrutadas", tables_path) %></li>
           <li class="<%= params[:action] == 'grid' ? 'active' : '' %>"><%= link_to("Grilla", grid_path) %></li>
         </ul>
       </div><!--/.nav-collapse -->

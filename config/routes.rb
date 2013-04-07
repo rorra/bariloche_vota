@@ -1,7 +1,6 @@
 BarilocheVota::Application.routes.draw do
 
   match '/votes', to: 'home#votes', as: 'votes'
-  match '/tables', to: 'home#tables', as: 'tables'
   match '/schools', to: 'home#schools', as: 'schools'
   match '/grid', to: 'home#grid', as: 'grid'
 

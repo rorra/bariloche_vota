@@ -1,0 +1,53 @@
+<%- content_for :head do %>
+  <%= javascript_include_tag('schools') %>
+<%- end %>
+
+<h1>Bariloche Vota</h1>
+
+<%- @data.each do |data| %>
+  <h4>Escuela <%= data[:name] %></h4>
+  <%- if data[:processed] %>
+    <div id="school_<%= data[:id] %>" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+    <script type="text/javascript">
+
+      $("#school_<%= data[:id] %>").highcharts({
+        chart: {
+          plotBackgroundColor: null,
+          plotBorderWidth: null,
+          plotShadow: false
+        },
+        title: {
+          text: "Referendum Bariloche"
+        },
+        tooltip: {
+          pointFormat: "{series.name}: <b>{point.percentage}%</b>",
+          percentageDecimals: 1
+        },
+        plotOptions: {
+          pie: {
+            allowPointSelect: true,
+            cursor: "pointer",
+            dataLabels: {
+              enabled: true,
+              color: "#000000",
+              connectorColor: "#000000",
+              formatter: function() {
+                return "<b>" + this.point.name + "</b>: " + this.percentage.toFixed(2) + " %";
+              }
+            }
+          }
+        },
+        series: [
+          {
+            type: "pie",
+            name: "Porcentaje",
+            data: [["Sí", <%= data[:votes_yes] %>], ["No", <%= data[:votes_no] %>]]
+          }
+        ]
+      });
+    </script>
+  <%- else %>
+    <h5>Sin datos</h5>
+  <%- end %>
+<%- end %>
+
