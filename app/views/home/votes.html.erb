@@ -1,1 +1,14 @@
+<%- content_for :head do %>
+  <%= javascript_include_tag('votes') %>
+<%- end %>
+
 <h1>Bariloche Vota</h1>
+
+<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto">
+
+</div>
+
+<div id="data" style="display: none">
+  <div id="votes_yes"><%= @votes_yes %></div>
+  <div id="votes_no"><%= @votes_no %></div>
+</div>
