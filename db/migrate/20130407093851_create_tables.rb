@@ -4,10 +4,10 @@ class CreateTables < ActiveRecord::Migration
       t.references :school
 
       t.string :name
-      t.integer :votes_yes
-      t.integer :votes_no
-      t.integer :votes_blank
-      t.integer :votes_nil
+      t.integer :votes_yes, null: false, default: 0
+      t.integer :votes_no, null: false, default: 0
+      t.integer :votes_blank, null: false, default: 0
+      t.integer :votes_nil, null: false, default: 0
 
       t.timestamps
     end
