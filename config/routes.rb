@@ -1,6 +1,11 @@
 BarilocheVota::Application.routes.draw do
 
-  root to: "home#index"
+  match '/votes', to: 'home#votes', as: 'votes'
+  match '/tables', to: 'home#tables', as: 'tables'
+  match '/schools', to: 'home#schools', as: 'schools'
+  match '/grid', to: 'home#grid', as: 'grid'
+
+  root to: "home#votes"
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
