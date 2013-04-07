@@ -9,7 +9,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
 gem 'exception_notification', git: 'git://github.com/smartinez87/exception_notification.git'
-#gem 'activeadmin'
+gem 'activeadmin'
 #gem 'activeadmin-axlsx'
 
 group :assets do
