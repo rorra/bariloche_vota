@@ -2,6 +2,7 @@ class HomeController < ApplicationController
   def votes
     @votes_yes = Table.sum(:votes_yes)
     @votes_no = Table.sum(:votes_no)
+    @total_votes = @votes_yes + @votes_no + Table.sum(:votes_blank) + Table.sum(:votes_nil)
   end
 
   def schools

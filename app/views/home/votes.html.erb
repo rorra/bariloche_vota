@@ -4,11 +4,20 @@
 
 <h1>Bariloche Vota</h1>
 
-<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto">
+<div class="row" style="margin-bottom: 40px">
+  <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto">
 
+  </div>
+
+  <div id="data" style="display: none">
+    <div id="votes_yes"><%= @votes_yes %></div>
+    <div id="votes_no"><%= @votes_no %></div>
+  </div>
 </div>
-
-<div id="data" style="display: none">
-  <div id="votes_yes"><%= @votes_yes %></div>
-  <div id="votes_no"><%= @votes_no %></div>
+<div class="row">
+  <div class="span8 offset2">
+    <div class="well" style="font-weight: bolder;font-size: 14px;text-align: center;">
+      Votos contabilizados: <%= @total_votes %>
+    </div>
+  </div>
 </div>
